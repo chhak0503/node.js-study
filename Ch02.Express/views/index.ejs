@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>index</title>
+  </head>
+  <body>
+    <h3>Ch2.Express 실습</h3>
+
+    <h4>링크</h4>
+    <a href="/sub/hello">Hello</a>
+    <a href="/sub/welcome">Welcome</a>
+    <a href="/sub/greeting">Greeting</a>
+
+    <h4>출력</h4>
+    <p>
+      tit1 : <%= tit1 %><br />
+      tit2 : <%= tit2 %><br />
+    </p>
+    <p>
+      uid : <%= user.uid %><br />
+      name : <%= user.name %><br />
+      hp : <%= user.hp %><br />
+      age : <%= user.age %><br />
+    </p>
+
+    <h4>조건문</h4>
+    <h4>if</h4>
+    <% if(result1){ %>
+    <p>result1은 True 입니다.</p>
+    <% } %>
+
+    <h4>if~else</h4>
+    <% if(result2){ %>
+    <p>result2은 True 입니다.</p>
+    <% }else{ %>
+    <p>result2은 False 입니다.</p>
+    <% } %>
+
+    <h4>if~else if ~ else</h4>
+    <% if(score > 90){ %>
+    <p>A 입니다.</p>
+    <% }else if(score > 80){ %>
+    <p>B 입니다.</p>
+    <% }else if(score > 70){ %>
+    <p>C 입니다.</p>
+    <% }else if(score > 60){ %>
+    <p>D 입니다.</p>
+    <% }else{ %>
+    <p>F 입니다.</p>
+    <% } %>
+
+    <h4>반복문</h4>
+    <table border="1">
+      <tr>
+        <th>아이디</th>
+        <th>이름</th>
+        <th>휴대폰</th>
+        <th>나이</th>
+      </tr>
+      <% for(const user of users){%>
+      <tr>
+        <td><%= user.uid %></td>
+        <td><%= user.name %></td>
+        <td><%= user.hp %></td>
+        <td><%= user.age %></td>
+      </tr>
+      <% }%>
+    </table>
+  </body>
+</html>
